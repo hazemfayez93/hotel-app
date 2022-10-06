@@ -1,0 +1,47 @@
+.description-container {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(18, 18, 18, 1);
+    display: grid;
+    color: rgba(237, 237, 237, 1);
+    grid-template-columns: 1fr;
+    padding: 4rem;
+    grid-gap: 4rem;
+
+    @media only screen and (min-width: 720px) {
+        padding: 6rem;
+        grid-gap: 6rem;
+    }
+
+    @media only screen and (min-width: 1000px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        padding: 6rem;
+        grid-gap: 12rem;
+    }
+
+    .description {
+        grid-column: 1 / 2;
+    }
+
+    p {
+        font-weight: 300;
+        line-height: 1.8;
+    }
+
+    p:not(:first-child) {
+        padding-top: 3rem;
+
+    }
+
+    .description-image {
+        width: 100%;
+        height: auto;
+        border-radius: 2rem;
+
+        @media only screen and (min-width: 1000px) {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

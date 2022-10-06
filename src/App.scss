@@ -1,0 +1,48 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    height: 100%;
+}
+
+#root {
+    height: 100%;
+}
+
+.App {
+    height: 100%;
+}
+
+
+input,
+select {
+    font-family: inherit;
+    color: inherit;
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    font-family: 'Poppins';
+    background-color: transparent;
+}

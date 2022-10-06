@@ -1,0 +1,18 @@
+.slide {
+    grid-area: 1/-1;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.activeSlider {
+    opacity: 1;
+    z-index: 1;
+    transition: opacity .3s ease-in-out;
+}
+
+.inactiveSlider {
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 0s ease-in-out .3s; 
+}

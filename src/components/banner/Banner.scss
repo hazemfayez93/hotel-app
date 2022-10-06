@@ -1,0 +1,149 @@
+.banner-container {
+    display: grid;
+    height: 100%;
+
+    .banner-image {
+        object-fit: cover;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        inset: 0;
+        overflow: hidden;
+
+    }
+
+    .banner-content {
+        padding: 4rem 2rem;
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        width: 100%;
+        background-color: rgba(18, 18, 18, .9);
+        display: flex;
+        align-self: end;
+        flex-direction: column;
+        align-items: center;
+        color: rgba(237, 237, 237, 1);
+        transition: background-color .2s ease;
+
+        @media only screen and (min-width: 720px) {
+            text-align: left;
+            padding: 6rem 4rem;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        @media only screen and (min-width: 1120px) {
+            padding: 7rem 5rem;
+        }
+
+        @media only screen and (min-width: 1520px) {
+            padding: 8rem 6rem;
+        }
+
+        &:hover {
+            background-color: rgba(18, 18, 18, 1);
+        }
+    }
+
+    .banner-image,
+    .banner-content {
+        grid-area: 1/-1;
+    }
+
+    .banner-title {
+        font-size: 3.2rem;
+        font-weight: 500;
+
+
+        @media only screen and (min-width: 720px) {
+            font-size: 3.7rem;
+        }
+
+        @media only screen and (min-width: 1120px) {
+            font-size: 4.2rem;
+        }
+
+        @media only screen and (min-width: 1520px) {
+            font-size: 4.8rem;
+        }
+
+    }
+
+    .banner-description {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+        font-weight: 300;
+
+        @media only screen and (min-width: 720px) {
+            font-size: 1.6rem;
+            margin-bottom: 0rem;
+        }
+
+        @media only screen and (min-width: 1120px) {
+            font-size: 1.7rem;
+        }
+
+        @media only screen and (min-width: 1520px) {
+            font-size: 1.8rem;
+        }
+
+
+    }
+
+    .banner-arrows {
+        display: flex;
+        position: absolute;
+        top: -7.2rem;
+        right: 0%;
+        z-index: 1;
+    }
+
+    .banner-left-arrow {
+        all: unset;
+        aspect-ratio: 1 / 1;
+        width: 7.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 255, 0, .7);
+
+        .banner-left-icon {
+            width: 1.8rem;
+            fill: rgba(18, 18, 18, 1);
+        }
+
+        &:hover {
+            background-color: rgba(18, 18, 18, 1);
+            cursor: pointer;
+
+            .banner-left-icon {
+                fill: rgba(0, 255, 0, 1);
+            }
+        }
+    }
+
+    .banner-right-arrow {
+        all: unset;
+        aspect-ratio: 1 / 1;
+        width: 7.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 255, 0, .7);
+
+        .banner-right-icon {
+            width: 1.8rem;
+            fill: rgba(18, 18, 18, 1);
+        }
+
+        &:hover {
+            background-color: rgba(18, 18, 18, 1);
+            cursor: pointer;
+
+            .banner-right-icon {
+                fill: rgba(0, 255, 0, 1);
+            }
+        }
+    }
+}
